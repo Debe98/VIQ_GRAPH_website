@@ -1,0 +1,170 @@
+/*GENERALE*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-size: 1.1rem;
+    color: black;
+    margin: 1.5rem;
+}
+
+a {
+    color: black;
+}
+
+a::after {
+    content: " (URL: " attr(href) ")";
+    font-size: 0.9em;
+    color: blue;
+}
+
+ul {
+    list-style-position: outside;
+    list-style-type: circle;
+}
+
+li {
+    margin-left: 1em;
+}
+
+#cancelletto {
+    color: orange;
+}
+
+#signature {
+    position: fixed;
+    font-size: 0.7rem;
+    text-decoration: underline;
+    font-family: 'Anonymous Pro', "Curier New", monospace;
+    top: 0.1rem;
+    right: 0.1rem;
+    color: orange;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "header" "main" "footer";
+    font-family: 'Roboto Slab', "Times New Roman", serif;
+}
+
+/*HEADER*/
+
+.header {
+    grid-area: header;
+    /*Titolo*/
+    text-align: left;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: orange;
+}
+
+/*NAV*/
+
+.nav {
+    display: none;
+}
+
+.nav a {
+    display: none;
+}
+
+/*MENU*/
+
+.menu {
+    display: none;
+}
+
+/*MAIN*/
+
+.main {
+    margin: 1rem 0.2rem;
+    grid-area: main;
+    line-height: 1.4em;
+}
+
+.main section {
+    margin: 0 0.4rem;
+}
+
+.main h2 {
+    margin-bottom: 0.5rem;
+}
+
+.main p {
+    margin-top: 0.7rem;
+    font-weight: 500;
+    border-left: 0.2rem solid orange;
+    padding-left: 0.6rem;
+}
+
+/*FOOTER*/
+
+.footer {
+    grid-area: footer;
+    padding: 0.5rem 0;
+    border-top: 0.2rem solid;
+    font-family: 'Anonymous Pro', "Curier New", monospace;
+    line-height: 1.5rem;
+    font-weight: bold;
+    word-spacing: -0.25em;
+    font-size: 0.95rem;
+}
+
+.footer > a {
+    position: relative;
+    top: -3rem;
+}
+
+.footer img {
+    display: inline-block;
+    margin-right: 0.5rem;
+    height: 3rem;
+}
+
+#io {
+    display: block;
+    position: relative;
+    top: 3.4rem;
+    height: 3rem;
+}
+
+#io abbr {
+    text-decoration: underline;
+}
+
+noscript {
+    display: none;
+}
+
+.graficoContenitore {
+    display: inline-block;
+    margin-top: 0.8rem;
+    width: 100%;
+}
+
+.graficoDiv {
+    display: inline-block;
+    width: 100%;
+    height: 600px;
+}
+
+select {
+    font: inherit;
+    display: inline-block;
+    width: 100%;
+    border: 0.02rem solid;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font-weight: 600;
+    color: black;
+}

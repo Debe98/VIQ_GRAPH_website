@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Luca Debernardi">
+    <meta name="description" content="Esame VIQ 2020">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <meta name="keywords" content="PWR, Esame, 2020, Politecnico di Torino, Programmazione web">
+    <title>Spiegazioni</title>
+    <script type="text/javascript" src="utility.js"></script>
+    <link rel="icon" type="image/png" href="IMG/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;531;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS/generico.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="CSS/others_header.css" media="screen">
+    <noscript><link id="tema" rel="stylesheet" type="text/css" href="CSS/light_theme.css" media="screen"></noscript>
+    <script> caricaTemaEsatto() </script>
+    <link rel="stylesheet" type="text/css" href="CSS/stampa.css" media="print">
+    <link rel="Sito del corso" type="text/html" href="//softeng.polito.it/courses/VIQ/">
+    <link rel="Sito Politecnico di Torino" type="text/html" href="//www.polito.it">
+</head>
+<body onresize="correctNav();">
+<p id="signature">-LD</p>
+<div class="gridContainer">
+    <div class="header">
+        <h1>Perché questo<span id="cancelletto">?</span></h1>
+    </div>
+    <div class="nav" id="navigation" onclick="handleNav();">
+        <a>Menu</a>
+    </div>
+    <div class="nav" id="nav_1">
+        <a href="index.html">Home</a>
+    </div>
+    <div class="nav active" id="nav_2">
+        <a>About</a>
+    </div>
+    <div class="nav" id="selectTema" onmouseenter="anteprimaTema();" onmouseleave="resetTema();">
+        <a onclick="switchTema() ">Tema</a>
+    </div>
+    <div class="menu">
+        <h2>Benvenuti!</h2>
+        <p>Questo sito contiene l'esercizio di redesign dell'esame datato 25/07/2020 del corso
+            Visualizzazione dell'Informazione Quantitativa del Politecnico di Torino.</p>
+        <h2>Link utili:</h2>
+        <ul>
+            <li><a href="//www.polito.it">Sito Politecnico</a></li>
+            <li><a href="//softeng.polito.it/courses/VIQ/">Sito del Corso</a></li>
+            <li><a href="//www.w3schools.com">W3School</a></li>
+            <li><a href="//developer.mozilla.org/en-US/">MDN</a></li>
+            <li><a href="//plotly.com/javascript/plotly-fundamentals/">Libreria Plotly</a></li>
+            <li><a href="//softeng.polito.it/courses/VIQ/PlotlyCheatsheet.html">Riassunto grafici</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <section>
+            <h2>Perché un sito tanto organizzato?</h2>
+            <p>Durante quest'ultimo semestre ho seguito due corsi di programmazione web:</p>
+            <ul>
+                <li><a href="//softeng.polito.it/courses/VIQ/">Visualizzazione dell'informazione quantitativa</a></li>
+                <li><a href="//security.polito.it/~lioy/01nbe/">Progettazione di servizi web e reti di calcolatori</a></li>
+            </ul>
+            <p>Poiché entrambi i corsi trattavano alcune tematiche comuni (HTML, CSS, Javascript),
+                e io stesso avevo già un'infarinatura di base in web development,
+                ho avuto la possibilità e il tempo di approfondire tali argomenti in maniera decisamente superiore
+                al livello medio richiesto per questo corso.</p>
+            <p>Avendo un progetto finale da presentare e volendo io provare a fare un sito web degno di questo nome,
+                ho deciso di sfruttare l'occasione per cimentarmi in quest'impresa, anche se chiaramente eccessiva e
+                non necessaria ai fini dell'esame.</p>
+            <p>Con questo appunto, ci terrei solo a precisare che la totalità di queste pagine è stata sviluppata
+                da me: ogni dettaglio, particolarità (o errore) è quindi totalmente originale e dovuto al mio lavoro;
+                e non ad un template preconfezionato trovato da qualche parte sul web per fare scena.</p>
+        </section>
+        <section>
+            <noscript>
+                Attenzione, per molte funzioni di questo sito web è richiesto l'utilizzo di Javascript.
+                In caso fosse disattivato, non sarà in alcun modo possibile consultare i grafici
+                presenti.
+            </noscript>
+        </section>
+    </div>
+    <div class="footer">
+        <div id="io">
+            <p>&copy; <abbr title="s244685@studenti.polito.it">Luca Debernardi</abbr></p>
+            <p>- <a href="//softeng.polito.it/courses/VIQ/" title="Sito del corso &quot;Visualizzazione dell'informazione quantitativa&quot;">VIQ</a>: Esame 2020</p>
+        </div>
+        <a href="//www.polito.it" title="Sito del Politecnico di Torino">
+            <noscript><img src = "IMG/PoliTO_logo_dark.png" alt = "Politecnico di Torino"></noscript>
+            <script> caricaLogoPoliEsatto(); </script>
+        </a>
+    </div>
+</div>
+</body>
+</html>

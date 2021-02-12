@@ -1,0 +1,35 @@
+body {
+    color: black;
+    background-color: white;
+}
+
+a {
+    color: black;
+}
+
+.header h1 {
+    background-color: white;
+}
+
+.nav:active, .active {
+    border-bottom-color: firebrick;
+}
+
+#io a:hover {
+    color: firebrick;
+}
+
+noscript {
+    color: firebrick;
+}
+
+/*VIQ*/
+
+.popup {
+    background-color: #fafafa;
+}
+
+select {
+    color: black;
+    background-color: white;
+}

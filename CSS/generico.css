@@ -1,0 +1,315 @@
+/*GENERALE*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-size: 1.3rem;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+ul {
+    list-style-position: outside;
+    list-style-type: circle;
+}
+
+li {
+    margin-left: 1em;
+}
+
+.menu a {
+    transition: color 0.5s ease;
+}
+
+#cancelletto {
+    color: orange;
+}
+
+#signature {
+    position: fixed;
+    font-size: 0.7rem;
+    text-decoration: underline;
+    font-family: 'Anonymous Pro', "Curier New", monospace;
+    top: 0.1rem;
+    right: 0.1rem;
+    color: orange;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33%;
+    grid-template-areas:
+            "header header header header header header header header header header header header"
+            "nav_1 nav_2 nav_3 . . . . . . . . selectTema"
+            "menu menu main main main main main main main main main main"
+            "footer footer footer footer footer footer footer footer footer footer footer footer";
+    font-family: "Raleway", "Helvetica", "arial", sans-serif;
+}
+
+/*NAV*/
+
+.nav {
+    border-color: orange;
+    overflow: auto;
+    border-right: 0.1rem solid;
+    border-bottom: 0 solid orange;
+    padding-bottom: 0.2rem;
+    transition: border-bottom 0.5s ease, padding-bottom 0.5s ease;
+    cursor: pointer;
+}
+
+.nav:hover, .activeNavigator {
+    border-bottom: 0.2rem solid orange;
+    padding-bottom: 0;
+}
+
+.nav:active, .active {
+    border-bottom: 0.2rem solid;
+    padding-bottom: 0;
+    font-weight: bolder;
+}
+
+.nav a {
+    display: block;
+    padding: 0.8rem 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+#navigation {
+    grid-area: navigation;
+    display: none;
+}
+
+#nav_1 {
+    grid-area: nav_1;
+}
+
+#nav_2 {
+    grid-area: nav_2;
+}
+
+#nav_3 {
+    grid-area: nav_3;
+}
+
+#selectTema {
+    grid-area: selectTema;
+    border-left: 0.1rem solid;
+    border-right: 0;
+    transition: background-color 0.5s ease, color 0.5s ease, border-bottom 0.5s ease, padding-bottom 0.5s ease;
+}
+
+/*MENU*/
+
+.menu {
+    grid-area: menu;
+    margin: 1rem 0.7rem;
+    font-size: 1.1rem;
+}
+
+.menu h2 {
+    font-size: 1.4rem;
+    margin: 0 0 0.15rem;
+}
+
+.menu p, ul {
+    margin: 0 0 0.6rem;
+}
+
+/*MAIN*/
+
+.main {
+    grid-area: main;
+    margin: 1rem 0.7rem 0;
+    line-height: 1.4em;
+}
+
+.main section {
+    margin: 0 2rem 1rem;
+}
+
+.main h2 {
+    margin-bottom: 0.5rem;
+}
+
+.main p {
+    margin-top: 0.7rem;
+    font-weight: 500;
+    border-left: 0.2rem solid orange;
+    padding-left: 0.6rem;
+}
+
+@media (min-width: 1000px) {
+    .main p {
+        margin-top: 0.7rem;
+        margin-right: 7rem;
+        font-weight: 500;
+        border-left: 0.2rem solid orange;
+        padding-left: 0.6rem;
+    }
+}
+
+/*FOOTER*/
+
+.footer {
+    grid-area: footer;
+    padding: 0.5rem 0;
+    border-top: 0.2rem solid;
+}
+
+.footer img {
+    margin-right: 0.5rem;
+    float: right;
+    height: 3rem;
+}
+
+#io {
+    display: inline-block;
+    position: relative;
+    left: 0.5rem;
+    height: 3rem;
+    font-size: 0.9rem;
+}
+
+#io p {
+    line-height: 1.5rem;
+    font-family: 'Anonymous Pro', "Curier New", monospace;
+    font-weight: bold;
+    word-spacing: -0.25em;
+}
+
+#io abbr {
+    text-decoration: underline dotted;
+}
+
+#io a {
+    text-decoration: underline dotted;
+    transition: color 0.5s ease;
+}
+
+/*TABLET*/
+
+@media (max-width: 1200px) {
+    .gridContainer {
+        grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+        grid-template-areas:
+                "header header header header header header header header header header"
+                "nav_1 nav_2 nav_3 navigation . . . . . selectTema"
+                "menu menu main main main main main main main main"
+                "footer footer footer footer footer footer footer footer footer footer";
+    }
+}
+
+@media (max-width: 1000px) {
+    .gridContainer {
+        grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+        grid-template-areas:
+    "header header header header header header header header"
+    "nav_1 nav_2 nav_3 navigation . . . selectTema"
+    "menu menu main main main main main main"
+    "footer footer footer footer footer footer footer footer";
+    }
+}
+
+@media (max-width: 800px) {
+    .gridContainer {
+        grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+        grid-template-areas:
+                "header header header header header header"
+                "nav_1 nav_2 nav_3 navigation . selectTema"
+                "menu menu main main main main"
+                "footer footer footer footer footer footer";
+    }
+}
+
+/*SMARTPHONE*/
+
+@media (max-width: 600px) {
+    .gridContainer {
+        grid-template-columns: 100%;
+        grid-template-areas: "header" "navigation" "nav_1" "nav_2" "nav_3" "selectTema" "main" "menu" "footer";
+    }
+
+    .nav {
+        border-right: 0;
+        display: none;
+    }
+
+    #navigation {
+        display: block;
+    }
+
+    #selectTema {
+        border-left: 0;
+    }
+
+    .main section {
+        margin: 0 0 1rem;
+    }
+}
+
+noscript {
+    visibility: visible;
+}
+
+.graficoContenitore {
+    display: block;
+    margin-top: 0.8rem;
+    overflow: hidden;
+    overflow-x: auto;
+    -ms-overflow-x: auto;
+}
+
+.graficoDiv {
+    display: block;
+    min-width: 700px;
+    height: 80vh;
+}
+
+/*VIQ, leggermente modificato per ragioni grafiche*/
+
+.hint {
+    font-style:italic;
+    font-size: 70%;
+    text-align: center;
+    font-weight:300;
+    display: inline-block;
+}
+
+.popup {
+    min-width: 350px;
+    max-width: 450px;
+    position:absolute;
+    bottom: 10px;
+    left: 10px;
+    border: dashed 1pt gray;
+    border-radius: 3px;
+    padding: 10px;
+    box-shadow: 5px 5px 10px;
+    z-index: 100;
+}
+
+select {
+    font: inherit;
+    display: inline-block;
+    width: 100%;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    border: 0.02rem solid;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font-weight: 600;
+}
+
+select:focus {
+    background-color: inherit;
+    color: inherit;
+}

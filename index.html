@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Luca Debernardi">
+    <meta name="description" content="Esame VIQ 2020">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <meta name="keywords" content="PWR, Esame, 2020, Politecnico di Torino, Programmazione web">
+    <title>Esame 2020 VIQ</title>
+    <script src="utility.js"></script>
+    <script src="graph_manager.js"></script>
+    <script src="https://oop.polito.it/js/VIQsupport.js"></script>
+    <script src="https://oop.polito.it/js/plotly-latest.min.js"></script>
+    <link rel="icon" type="image/png" href="IMG/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;531;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS/generico.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="CSS/main_header.css" media="screen">
+    <noscript><link id="tema" rel="stylesheet" type="text/css" href="CSS/light_theme.css" media="screen"></noscript>
+    <script> caricaTemaEsatto() </script>
+    <link rel="stylesheet" type="text/css" href="CSS/stampa.css" media="print">
+    <link rel="Sito del corso" type="text/html" href="//softeng.polito.it/courses/VIQ/">
+    <link rel="Sito Politecnico di Torino" type="text/html" href="//www.polito.it">
+</head>
+<body onresize="correctNav();">
+<p id="signature">-LD</p>
+<div class="gridContainer">
+    <div class="header">
+        <!-- Devo usare span perché ::first-letter non funziona con il carattere '#' -->
+        <h1><span id="cancelletto">#</span>REDESIGN</h1>
+    </div>
+    <div class="nav" id="navigation" onclick="handleNav();">
+        <a>Menu</a>
+    </div>
+    <div class="nav active" id="nav_1">
+        <a href="#">Home</a>
+    </div>
+    <div class="nav" id="nav_2">
+        <a href="about.html">About</a>
+    </div>
+    <div class="nav" id="selectTema" onmouseenter="anteprimaTema();" onmouseleave="resetTema();">
+        <a onclick="switchTema() ">Tema</a>
+    </div>
+    <div class="menu">
+        <h2>Benvenuti!</h2>
+        <p>Questo sito contiene l'esercizio di redesign dell'esame datato 25/07/2020 del corso
+            Visualizzazione dell'Informazione Quantitativa del Politecnico di Torino.</p>
+        <h2>Link utili:</h2>
+        <ul>
+            <li><a href="//www.polito.it">Sito Politecnico</a></li>
+            <li><a href="//softeng.polito.it/courses/VIQ/">Sito del Corso</a></li>
+            <li><a href="//www.w3schools.com">W3School</a></li>
+            <li><a href="//developer.mozilla.org/en-US/">MDN</a></li>
+            <li><a href="//plotly.com/javascript/plotly-fundamentals/">Libreria Plotly</a></li>
+            <li><a href="//softeng.polito.it/courses/VIQ/PlotlyCheatsheet.html">Riassunto grafici</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <section>
+            <h2>Le grandi crisi del lavoro in America</h2>
+            <p>
+                Il grafico sottostante mostra il numero di Americani che hanno fatto domanda di sussidio di disoccupazione durante
+                il picco delle più grandi crisi del lavoro della storia americana recente.
+            </p>
+            <p>
+                Lo scopo di questo grafico è mostrare quanto l'attualissima crisi dovuta al Coronavirus sia stata devastante per il
+                mercato del lavoro americano, facendo misurare incrementi di disoccupazione (in un periodo di 28 giorni) che
+                non hanno eguali negli ultimi 50 anni.
+            </p>
+            <form id="form" onchange="plot()">
+                <select name="valoreSelect">
+                    <option value="Percentuale" selected>Valore percentuale</option>
+                    <option value="Assoluto">Valore assoluto</option>
+                </select>
+            </form>
+            <div id="redesign" class="graficoContenitore">
+                <div id="grafico1" class="graficoDiv"></div>
+            </div>
+        </section>
+            <h2>Commenti:</h2>
+            <p>Tra tutti i tipi di grafico, il bar-chart è forse quello che meglio riesce a rappresentare
+            la portata dell'emergenza, in quanto, sebbene i valori relativi al passato siano abbastanza vicini tra loro,
+            rimangono estremamente distanti da quello con cui sono chiamati a confrontarsi, quello corrente.</p>
+            <p>Questo permette di visualizzare immediatamente, senza lie factor e ancor prima di prestare attenzione ai numeri,
+                ciò che il grafico è chiamato a mostrare, ovvero la gravità dell'emergenza in corso.</p>
+        <section>
+            <noscript>
+                Attenzione, per molte funzioni di questo sito web è richiesto l'utilizzo di Javascript.
+                In caso fosse disattivato, non sarà in alcun modo possibile consultare i grafici
+                presenti.
+            </noscript>
+        </section>
+    </div>
+    <div class="footer">
+        <div id="io">
+            <p>&copy; <abbr title="s244685@studenti.polito.it">Luca Debernardi</abbr></p>
+            <p>- <a href="//softeng.polito.it/courses/VIQ/" title="Sito del corso &quot;Visualizzazione dell'informazione quantitativa&quot;">VIQ</a>: Esame 2020</p>
+        </div>
+        <a href="//www.polito.it" title="Sito del Politecnico di Torino">
+            <noscript><img src = "IMG/PoliTO_logo_dark.png" alt = "Politecnico di Torino"></noscript>
+            <script> caricaLogoPoliEsatto(); </script>
+        </a>
+    </div>
+</div>
+</body>
+</html>

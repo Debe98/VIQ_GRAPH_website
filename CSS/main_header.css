@@ -1,0 +1,24 @@
+/*HEADER PAGINA PRINCIPALE */
+
+.header {
+    grid-area: header;
+    /*Titolo*/
+    text-align: center;
+    padding: 40vh 0;
+    /*Sfondo*/
+    background-image: url("../IMG/sfondo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+.header h1 {
+    display: block;
+    font-size: 11vmin;
+    font-weight: 500;
+    line-height: 20vh;
+    text-decoration: underline;
+    text-decoration-color: orange;
+    transition: background-color 0.5s ease;
+}

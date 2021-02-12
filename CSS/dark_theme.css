@@ -1,0 +1,35 @@
+body {
+    color: lightgray;
+    background-color: #404040;
+}
+
+a {
+    color: lightgray;
+}
+
+.header h1 {
+    background-color: #404040;
+}
+
+.nav:active, .active {
+    border-bottom-color: orangered;
+}
+
+#io a:hover {
+    color: orangered;
+}
+
+noscript {
+    color: orangered;
+}
+
+/*VIQ*/
+
+.popup {
+    background-color: #505050;
+}
+
+select {
+    color: lightgray;
+    background-color: #404040;
+}
